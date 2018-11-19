@@ -1,6 +1,6 @@
 # vue-cli-study
 
-> A Vue.js project
+> 这是一个vue-project项目
 
 ## Build Setup
 
