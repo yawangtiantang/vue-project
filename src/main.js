@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App'
+import router from './router/index.js'
 // 导入mui的css样式
 import './lib/mui/css/mui.css'
 // 导入mui扩展图标样式
@@ -17,6 +18,6 @@ Vue.component(Header.name, Header)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  
+  router,
   render: h => h(App)
 })

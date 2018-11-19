@@ -22,4 +22,5 @@ npm run build --report
 2.将扩展图标拷贝到项目中
 3.在main.js中引入扩展图标的样式
 4.使用扩展图标
+##设置当前选中tab栏高亮
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
