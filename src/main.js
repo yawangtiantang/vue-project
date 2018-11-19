@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App'
 // 导入mui的css样式
 import './lib/mui/css/mui.css'
+// 导入mui扩展图标样式
+import './lib/mui/css/icons-extra.css'
 
 Vue.config.productionTip = false
 
