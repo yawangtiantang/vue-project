@@ -7,7 +7,8 @@ Vue.use(VueResource)
 import './lib/mui/css/mui.css'
 // 导入mui扩展图标样式
 import './lib/mui/css/icons-extra.css'
-
+// 导入自己的全局样式
+import './css/common.less'
 Vue.config.productionTip = false
 
 // 按需导入需要的mint-ui组件
