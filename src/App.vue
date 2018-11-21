@@ -22,8 +22,13 @@
 			</router-link>
 		</nav>
     <!-- 中间区域 -->
-    <!-- <router-view></router-view> -->
+		<transition>
+			<router-view>
+
+		  </router-view>
    
+		</transition>
+    
   </div>
 </template>
 
@@ -34,6 +39,18 @@
 <style lang='less'>
   .app-container{
     padding-top:40px;
-    padding-bottom:50px;
+		padding-bottom:50px;
+		.v-enter{
+			opacity:0;
+			transform:translateX(100px)
+		}
+		.v-leave-to{
+			position:absolute;
+			opacity:0;
+			transform:translateX(-100px)
+		}
+		.v-enter-active,.v-leave-active{
+			transition:all 0.6s ease
+		}
   }
 </style>
