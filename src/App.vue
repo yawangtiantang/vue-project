@@ -40,14 +40,15 @@
   .app-container{
     padding-top:40px;
 		padding-bottom:50px;
+		overflow-x:hidden;
 		.v-enter{
 			opacity:0;
-			transform:translateX(100px)
+			transform:translateX(100%px)
 		}
 		.v-leave-to{
 			position:absolute;
 			opacity:0;
-			transform:translateX(-100px)
+			transform:translateX(-100%px)
 		}
 		.v-enter-active,.v-leave-active{
 			transition:all 0.6s ease
