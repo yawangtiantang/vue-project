@@ -4,6 +4,7 @@ import homeComponent from '../pages/home/index.vue'
 import memberComponent from '../pages/member/index.vue'
 import searchComponent from '../pages/search/index.vue'
 import shopcarComponent from '../pages/shopcar/index.vue'
+import newsListComponent from '../pages/newsList/index.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -12,7 +13,8 @@ export default new Router({
     {path:'/home',component:homeComponent},
     {path:'/member',component:memberComponent},
     {path:'/search',component:searchComponent},
-    {path:'/shopcar',component:shopcarComponent}
+    {path:'/shopcar',component:shopcarComponent},
+    {path:'/home/newsList',component:newsListComponent}
   ],
   linkActiveClass:'mui-active'
   
