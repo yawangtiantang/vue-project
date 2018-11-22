@@ -3,6 +3,8 @@ import App from './App'
 import router from './router/index.js'
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
+// 配置vue-resource的请求根域名
+Vue.http.options.root = 'http://www.lovegf.cn:8899/'
 // 导入mui的css样式
 import './lib/mui/css/mui.css'
 // 导入mui扩展图标样式
