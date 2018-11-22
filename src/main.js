@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router/index.js'
 import VueResource from 'vue-resource'
+import moment from 'moment'
 Vue.use(VueResource)
 // 配置vue-resource的请求根域名
 Vue.http.options.root = 'http://www.lovegf.cn:8899/'
@@ -20,7 +21,11 @@ import { Header,Swipe, SwipeItem} from 'mint-ui'
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
-
+// 定义全局过滤器
+Vue.filter('dateFormat', function(dateStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
+  // 直接调用表示获取当前时间
+  return moment(dateStr).format(pattern)
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
