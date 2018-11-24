@@ -10,7 +10,7 @@
       <div class='content'> {{item.content || '此人有点懒'}}</div>
     </div>
   </div>    
-  <mt-button type='danger' size='large' plain>加载更多</mt-button>
+  <mt-button @click='loadMore' type='danger' size='large' plain >加载更多</mt-button>
 </div>
  
 </template>
@@ -32,13 +32,19 @@ import {Toast} from 'mint-ui'
         getComments(){
           this.$http.get("api/getcomments/" + this.id + "?pageindex=" + this.pageIndex).then(result =>{
             if(result.body.status===0){
-              this.commentList=result.body.message
+              // this.commentList=result.body.message
+              this.commentList= this.commentList.concat(result.body.message)
             }else{
               Toast('获取评论信息失败')
             }
           })
-        }
+        },
+        loadMore(){
+      this.pageIndex++
+      this.getComments()
     }
+    }
+    
   }
 </script>
 <style lang='less'>
