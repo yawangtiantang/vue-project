@@ -7,7 +7,7 @@
   <div class='comment-list'>
     <div class="comment-item" v-for="(item,index) in commentList" :key='index'>
       <div class='comment-title'>第{{index + 1}}楼&nbsp;&nbsp;用户:{{item.user_name}}&nbsp;&nbsp;发表时间:{{item.add_time | dateFormat}}</div>
-      <div class='content'> {{item.content || '此人有点懒'}}</div>
+      <div class='content'> {{item.content=='undefined' ? '此人有点懒':item.content || '此人有点懒'}}</div>
     </div>
   </div>    
   <mt-button @click='loadMore' type='danger' size='large' plain >加载更多</mt-button>
