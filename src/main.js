@@ -15,12 +15,18 @@ import './css/common.less'
 Vue.config.productionTip = false
 
 // 按需导入需要的mint-ui组件
-import { Header,Swipe, SwipeItem} from 'mint-ui'
+import { 
+  Header,
+  Swipe, 
+  SwipeItem,
+  button} 
+  from 'mint-ui'
 
 // 注册组件
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+Vue.component(button.name, button);
 // 定义全局过滤器
 Vue.filter('dateFormat', function(dateStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
   // 直接调用表示获取当前时间

@@ -6,13 +6,17 @@
              <span class='click'>{{newsInfo.click}}</span>
          </div>
          <hr>
-         <div class="content" v-html='newsInfo.content'></div>
+         <div class="content" v-html='newsInfo.content'>
+        
+         </div>
+         <comment :id='id'></comment>
     </div>
    
     
 </template>
 <script>
 import {Toast} from 'mint-ui'
+import comment from '../../components/comment'
     export default {
         data(){
             return{
@@ -33,6 +37,9 @@ import {Toast} from 'mint-ui'
             }
                 })
             }
+        },
+        components:{
+            comment
         }
     }
 </script>
