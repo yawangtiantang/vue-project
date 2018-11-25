@@ -6,6 +6,8 @@ import moment from 'moment'
 Vue.use(VueResource)
 // 配置vue-resource的请求根域名
 Vue.http.options.root = 'http://www.lovegf.cn:8899/'
+// 配置post请求以传统表单形式提交参数
+Vue.http.options.emulateJSON = true;
 // 导入mui的css样式
 import './lib/mui/css/mui.css'
 // 导入mui扩展图标样式
