@@ -3,24 +3,10 @@
         <div id="slider" class="mui-slider">
 			<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
 				<div class="mui-scroll">
-					<a class="mui-control-item mui-active" href="#item1mobile" data-wid="tab-top-subpage-1.html">
-							推荐
+					<a class="mui-control-item mui-active" v-for= '(item ) in categories' :key='item.id'>
+							{{item.title}}
 					</a>
-					<a class="mui-control-item" href="#item2mobile" data-wid="tab-top-subpage-2.html">
-							热点
-					</a>
-					<a class="mui-control-item" href="#item3mobile" data-wid="tab-top-subpage-3.html">
-							北京
-					</a>
-					<a class="mui-control-item" href="#item4mobile" data-wid="tab-top-subpage-4.html">
-							社会
-					</a>
-					<a class="mui-control-item" href="#item5mobile" data-wid="tab-top-subpage-5.html">
-							娱乐
-					</a>
-					<a class="mui-control-item" href="#item6mobile" data-wid="tab-top-subpage-6.html">
-						科技
-					</a>
+					
 				</div>
 			</div>
 
@@ -37,11 +23,21 @@ import mui from "../../lib/mui/js/mui.min.js";
     export default{
         data(){
             return{
-
+				categories:[]
             }
         },
+		created(){
+			this.getAllCategory()
+		},
         methods:{
-
+			getAllCategory(){
+				this.$http.get('api/getimgcategory').then(result=>{
+					if(result.body.status===0){
+						this.categories=result.body.message
+						this.categories.unshift({title:'全部',id:0})
+					}
+				})
+			}
         },
 		mounted() {
     // 初始化区域滚动一定要放在mounted钩子函数中
@@ -53,5 +49,5 @@ import mui from "../../lib/mui/js/mui.min.js";
 		}
 </script>
 <style lang='less'>
-	
+
 </style>
