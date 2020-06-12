@@ -1,12 +1,23 @@
 <template>
     <div class="home-container">
-        memberContainer
+       
     </div>
 
 </template>
 <script>
-    
+     export default {
+        data(){
+            return{
+               
+            }
+        },  
+        methods: {
+            
+        }
+    }
 </script>
-<style>
-
+<style lang="less">
+.main {
+      
+   }
 </style>
